@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm14 : CSS3 Table</title>
+		<style>
+            table{
+                border: 1px solid blue;
+				border-collapse: collapse;
+            }
+            td,th{
+				border : 1px dotted green;
+			    text-align: left;
+				padding:10px;
+				height:20px;
+				width:100px
+			}
+			thead{
+				background : darkgray;
+				color:yellow;
+			}
+			thead, tfoot{
+				background : darkgray;
+				color : yellow;
+			}
+			td,tfoot th{
+				border-bottom:1px solid gray
+			}
+			tbody tr:nth-child(even){
+				background : aliceblue;
+			}
+			tbody tr:hover{
+				background : pink;
+			}
+		</style>
+		<script></script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<h3>1학기 성적</h3>
+		<hr>
+		<table>
+			<thead>
+				<tr>
+					<th>이름</th><th>HTML</th><th>CSS</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>합</th><th>175</th><th>169</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>황기태</td><td>80</td><td>70</td>
+				</tr>
+				<tr>
+					<td>이재문</td><td>95</td><td>99</td>
+				</tr>
+				<tr>
+					<td>이병은</td><td>85</td><td>90</td>
+				</tr>
+				<tr>
+					<td>김남윤</td><td>50</td><td>40</td>
+				</tr>
+			<tbody>
+		</table>
+	</body>
+
+</html>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm14 : CSS3 animation</title>
+		<style>
+			div {
+				display: inline-block;
+				padding: 5px;
+				color: white;
+				background: olivedrab;
+			}
+
+			/* 변환 */
+			div#rotate {
+				transform:rotate(20deg); }
+			div#skew {
+				transform:skew(0deg,-20deg); }
+			div#translate {
+				transform:translateY(100px); }
+			div#scale {
+				transform:scale(3,1) }
+
+			/* 마우스 올릴 때 추가 변환 */
+			div#rotate:hover {
+				transform: rotate(80deg);
+			}
+			div#skew:hover {
+				transform: skew(0deg, -60deg);
+			}
+			div#translate:hover {
+				transform:translate(50px,100px);  }
+			div#scale:hover {
+				transform: scale(1,5);	}
+
+			/* 마우스 누를 때 추가 변환 */
+			div#scale:active {
+				transform: scale(1,5) }
+
+		</style>
+		<script></script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<h3>다양한 Transform</h3>
+		아래는 회전(rotate), 기울임(skew), 이동(translate), 확대/축소(scale)가 적용된
+		사례이다. 또한 마우스를 올리면 추가적 변환이 일어난다.
+		<hr>
+        <p></p><p></p><p></p>
+		<div id="rotate">
+			20도 회전
+		</div>
+		<div id="skew">
+			skew(0,-20deg)
+		</div>
+		<div id="translate">
+			y 방향으로 70px 이동
+		</div>
+		<div id="scale">
+			폭 3배 확대
+		</div>
+
+	</body>
+
+</html>
+

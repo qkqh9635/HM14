@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm14 : CSS3 animation</title>
+		<style>
+			@keyframes textColorAnimation {
+			0% { color : blue; }
+			30% { color : green; font-size: 4em }
+			100% { color : red;font-size:medium }
+			}
+			span {
+				animation-name: textColorAnimation;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+			}
+
+		</style>
+		<script></script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<h3>Learn CSS3 animation!</h3>
+		<hr>
+		<p>
+			<span>span</span> 텍스트를 5초에 blue, green, red로 무한 반복합니다.
+		</p>
+
+	</body>
+
+</html>
+
