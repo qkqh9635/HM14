@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm14 : card </title>
+		<style>
+			#fixed {
+				position: absolute;
+				top: 130px;
+				left: 200px;
+				width: 125px;
+				padding: 2px;
+				background: red;
+				color: white;
+				box-shadow: 2px 2px 2px black,
+                0 0 25px green,
+                0 0 5px darkblue;
+            text-shadow: 2px 2px 4px black;
+			}
+			#fixed2 {
+				position:absolute ;
+				bottom:490px;
+				left: 40px;
+				width: 100px;
+				padding: 5px;
+				background: yellow;
+				color: black;
+				box-shadow: 2px 2px 2px black,
+                0 0 25px green,
+                0 0 5px darkblue;
+                text-shadow: 3px 2px 3px green;
+
+			}
+			#M{
+				position: fixed;
+				top: 180px;
+				left: 150px;
+				width: 14px;
+				padding: 3px;
+				background: forestgreen;
+				color: greenyellow;
+			}
+			#E{
+				position: fixed;
+				top: 198px;
+				left: 120px;
+				width: 12px;
+				padding: 4px;
+				background: forestgreen;
+				color: greenyellow;
+			}
+			#E1{
+				position: fixed;
+				top: 260px;
+				left: 100px;
+				width: 12px;
+				padding: 4px;
+				background: forestgreen;
+				color: greenyellow;
+			}
+			#R{
+				position: fixed;
+				top: 320px;
+				left: 80px;
+				width: 12px;
+				padding: 4px;
+				background: forestgreen;
+				color: greenyellow;
+			}
+			#Y{
+				position: fixed;
+				top: 350px;
+				left: 50px;
+				width: 12px;
+				padding: 4px;
+				background: forestgreen;
+				color: greenyellow;
+			}
+			#C{
+				position: fixed;
+				top: 160px;
+				left: 200px;
+				width: 12px;
+				padding: 4px;
+
+			}
+			#M1{
+				position: fixed;
+				top: 220px;
+				left: 260px;
+				width: 12px;
+				padding: 4px;
+				background: forestgreen;
+				color: greenyellow;
+			}
+			#C2{
+				position: fixed;
+				top: 200px;
+				left: 210px;
+				color: black;
+			}
+			#A{
+				position: fixed;
+				top: 260px;
+				left: 260px;
+				width: 12px;
+				padding: 4px;
+				background: forestgreen;
+				color: greenyellow;
+			}
+			#S{
+				position: fixed;
+				top: 330px;
+				left: 280px;
+				width: 12px;
+				padding: 4px;
+				background: forestgreen;
+				color: greenyellow;
+			}
+			p {
+            background: rgb(179, 240, 248);
+            width: 300px;
+            height: 350px;
+            padding: 10px;
+            border: 20px solid lightgray;
+            /*border-width와 border-style 동시 지정 */
+        }
+		
+		
+		
+		#round {
+            border-image: url("media/a.gif") 30 round;
+        }
+
+        #repeat {
+            border-image: url("media/a.gif") 30 repeat;
+        }
+
+        #stretch {
+            border-image: url("media/a.gif") 30 stretch;
+        }
+
+		@keyframes textColorAnimation {
+                 0% { color :black; }
+                 30% { color : yellowgreen; } 
+				 60%{color :orange}
+				 85%{color:rgb(177, 56, 56)}
+                 100% { color :yellow; }
+                  }
+span {
+animation-name : textColorAnimation; 
+animation-duration : 5s;
+animation-iteration-count : infinite; 
+}
+
+@keyframes textColorAnimation {
+                 0% { color :yellowgreen; }
+                 30% { color : green; } 
+				 60%{color :orange}
+				 85%{color:rgb(177, 56, 56)}
+                 100% { color :yellow; }
+                  }
+s {
+animation-name : textColorAnimation; 
+animation-duration : 1s;
+animation-iteration-count : infinite; 
+}
+
+
+	  
+
+
+
+
+		</style>
+		<script></script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<span><h1>Merry Christmas!</h1></span>
+		<hr>
+		<P id="round">
+		<img src="media/christmastree.png"
+		width="300" height="300"
+		alt="크리스마스 트리">
+		
+		<audio src="media/크리스마스브금.mp3" controls autoplay  loop></audio>
+		
+
+		<div id="fixed">
+		Meery Christmas
+		</div>
+		<div id="fixed2">
+			hm14 강지환
+		</div>
+		<div id="M">
+			<s>M</s>
+		</div>
+		<div id="E">
+			<s>E</s>
+		</div>
+		<div id="E1">
+			<s>E</s>
+		</div>
+		<div id="R">
+			<s>R</s>
+		</div>
+		<div id="Y">
+			<s>Y</s>
+		</div>
+		<div id="C">
+			<img src = "media/chris.png" width="60" height="60">
+		</div>
+		<div id="M1">
+			<s>M</s>
+		</div>
+		<div id="C2">
+			(CHRIS)
+		</div>
+		<div id="A">
+			<s>A</s>
+		</div>
+		<div id="S">
+			<s>S</s>
+		</div>
+
+		
+        
+            
+			<li><a href="hm14_rpt02.html" target="_self">이전으로</a></li>
+	</body>
+
+</html>
+
