@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript calculator</title>
+    <style></style>
+    <script>
+      function calc_add() {
+        // calc_add() 로 변경!!
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var result;
+        result = parseInt(x) + parseInt(y);
+        document.getElementById("result").value = result;
+      }
+
+      function calc_sub() {
+        // 뺄셈
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var result;
+        result = parseInt(x) - parseInt(y);
+        document.getElementById("result").value = result;
+      }
+      function calc_mul() {
+        // 곱셈
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var result;
+        result = parseInt(x) * parseInt(y);
+        document.getElementById("result").value = result;
+      }
+      function calc_div() {
+        // 나눗셈
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var result;
+        result = parseInt(x) / parseInt(y);
+        document.getElementById("result").value = result;
+      }
+      function calc_mod() {
+        // 나머지
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var result;
+        result = parseInt(x) % parseInt(y);
+        document.getElementById("result").value = result;
+      }
+      function calc_1() {
+        // >
+        var  a = document.getElementById("a").value;
+        var  b = document.getElementById("b").value;
+        var result1;
+        result1 = a > b
+        document.getElementById("result1").value = result1;
+      }
+      function calc_2() {
+        // <
+        var  a = document.getElementById("a").value;
+        var  b = document.getElementById("b").value;
+        var  result1;
+        result1 = a < b
+        document.getElementById("result1").value = result1;
+      }
+      function calc_3() {
+        // ==
+        var  a = document.getElementById("a").value;
+        var  b = document.getElementById("b").value;
+        var  result1;
+        result1 = a == b
+        document.getElementById("result1").value = result1;
+      }
+      function calc_4() {
+        // <=
+        var  a = document.getElementById("a").value;
+        var  b = document.getElementById("b").value;
+        var  result1;
+        result1 = a <= b
+        document.getElementById("result1").value = result1;
+      }
+      function calc_5() {
+        // >=
+        var  a = document.getElementById("a").value;
+        var  b = document.getElementById("b").value;
+        var  result1;
+        result1 = a >= b
+        document.getElementById("result1").value = result1;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>HM14 계산기</h3>
+    <hr />
+    <h3>간단한 계산기</h3>
+    <form name="myform" action="..." method="post">
+      첫번째 정수:
+      <input id="x" />
+      <br />
+      두번째 정수:
+      <input id="y" />
+      <br />
+      계산결과:
+      <input id="result" />
+      <br />
+      <input type="button" value="+" onclick="calc_add();" />
+      <input type="button" value="-" onclick="calc_sub();" />
+      <input type="button" value="*" onclick="calc_mul();" />
+      <input type="button" value="/" onclick="calc_div();" />
+      <input type="button" value="%" onclick="calc_mod();" /><br>
+    </form>
+    <form name="hm14" action="..." method="post">
+    <h3>비교연산</h3>
+    첫번째 :
+    <input id = "a"/>
+    <br/>
+    두번째 :
+    <input id= "b"/>
+    <br/>
+    결과:
+    <input id="result1">
+    <br/>
+    <input type="button" value=">" onclick="calc_1();" />
+    <input type="button" value="<" onclick="calc_2();" />
+    <input type="button" value="==" onclick="calc_3();" />
+    <input type="button" value="<=" onclick="calc_4();" />
+    <input type="button" value=">=" onclick="calc_5();" />
+    </form>
+
+  </body>
+</html>

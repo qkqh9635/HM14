@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm14 : Javascript</title>
+		<style>
+		</style>
+
+		</script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<h3>JS dialog : prompt()</h3>
+		<hr>
+		<script>
+			var ret = prompt ("이름을 입력하세요", "황기태");
+			if (ret == null) {
+				// 취소 버튼이나 다이얼로그를 닫은 경우
+			} else if (ret == "") {
+				// 문자열 입력 없이 확인 버튼 누른 경우
+			} else {
+				// ret에는 사용자가 입력한 문자열
+				document.write("입력한 이름은 " + ret + " 입니다.");
+
+			}
+		</script>
+
+	</body>
+
+</html>
+

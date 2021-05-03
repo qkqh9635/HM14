@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm14 : Javascript</title>
+		<style>
+		</style>
+
+		</script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<h3>지역변수와 전역변수 I</h3>
+		<hr>
+		<script>
+			var x = 100;
+			// 전역변수 x
+
+			function f() {// 함수 f() 선언
+				var x = 1;
+                // 지역변수 x
+                // x = 1;   // 그러면 이 경우는?
+                // let x = 1; // 이건 뭐지?
+
+				document.write("지역변수 x=" + x);
+				document.write("<br>");
+				document.write("전역변수 x=" + this.x);
+			}
+
+			f(); // 함수 f() 호출
+			
+		</script>
+
+		<hr>
+		<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#%EB%B3%80%EC%88%98_%EC%84%A0%EC%96%B8">JS guide</a>
+
+	</body>
+
+</html>
+
