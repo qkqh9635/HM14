@@ -5,36 +5,29 @@
     <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
     <meta charset="utf-8" />
     <title>hm14 : Javascript</title>
-    <style>
-
-    </style>
+    <style></style>
     <script>
-      function c2f(){
-
-        
+      function c2f(c){
+        var f = (9.0/5.0) * c + 32;
+        return f;
       }
     </script>
   </head>
 
   <body>
     <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
-    <h3>온도 변환</h3>
+    <h2>Javascript:</h2>
+    <h2>F &lt;-&gt;C Temperture Converter</h2>
     <h3>F = (9/5)*C + 32</h3>
     <hr />
     <table border="3">
       <tr>
-        <td>섭씨온도</td>
-        <td>화씨온도</td>
+        <td>섭씨온도(C)</td>
+        <td>화씨온도(F)</td>
       </tr>
       <script>
         for (celsius = 0; celsius <= 50; celsius = celsius + 5) {
-          document.write(
-            "<tr><td>" +
-              celsius +
-              "</td><td>" +
-              ((celsius * 9.0) / 5 + 32) +
-              "</td></tr>"
-          );
+          document.write("<tr><td>" + celsius + "</td><td>" + c2f(celsius) + "</td></tr>");
         }
       </script>
     </table>
