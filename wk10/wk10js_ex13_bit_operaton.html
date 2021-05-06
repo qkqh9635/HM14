@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript</title>
+    <style></style>
+    <script>
+      function digit8(v) {
+        // 숫자 v를 8비트 2진수로 변환
+        var str = "";
+        for (i = 0; i < 8; i++, v <<= 1) {
+          if (v & 0x80) str += "1";
+          else str += "0";
+        }
+        return str;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>비트 논리 연산과 시프트 연산</h3>
+    <hr />
+    <script>
+      var x = 10,
+        y = 3;
+      document.write("<pre>");
+      document.write("x=" + x + ", y=" + y + "<br>");
+      document.write("x : 				" + digit8(x) + "<br>");
+      document.write("y : 				" + digit8(y) + "<br>");
+      document.write("<hr>");
+      document.write("x & y  : 		" + digit8(x&y) + "<br>");
+      document.write("x | y  : 		" + digit8(x|y) + "<br>");
+      document.write("x ^ y  : 		" + digit8(x^y) + "<br>");
+      document.write("~x     : 		" + digit8(~x) + "<br>");
+      document.write("<hr>");
+      document.write("x << 1 : 		" + digit8(x<<1) + " (" + (x<<1) + ")<br>");
+      document.write("x >> 1 : 		" + digit8(x>>1) + " (" + (x>>1) + ")<br>");
+      document.write("x >>> 1: 	" + digit8(x>>>1) + " (" + (x>>>1) + ")");
+      document.write("</pre>");
+    </script>
+  </body>
+</html>

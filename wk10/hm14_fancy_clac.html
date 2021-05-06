@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript</title>
+    <style>
+          input{
+        padding:8px;
+        display:inline;
+        margin-top:4px;
+        font-size:20px;
+    
+      }
+      input#display{
+        color:black;
+        background-color: #99ffcc;
+        font-size:20px;
+        text-align:right
+
+      }
+      input#num{
+        background-color:#ffff66;
+        font-weight: bold;
+      }
+      input#op{
+        background-color: #ff9900;
+        font-weight:bold; 
+      }
+      input#clear{
+        background-color: #00ffff;
+      }
+      input#enter{
+        background-color: #00ffff;
+      }
+    </style>
+    <script>
+      var expression = "";
+
+      function add(character) {
+        expression = expression + character;
+
+        document.getElementById("display").value = expression;
+      }
+
+      function del() {
+        expression = expression.substring(0,expression.length-1);
+        document.getElementById("display").value = expression;
+      }
+      function compute() {
+        var expression_num =parseFloat(eval(expression)) ;
+        if (isInteger(expression_num) == true) {
+          expression = expression_num;
+        } else {
+          expression = expression_num.toFixed(2);
+        }
+        document.getElementById("display").value =expression ;
+      }
+
+      function clearDisplay() {
+        expression = "";
+        document.getElementById("display").value = "0";
+      }
+
+      function isInteger(x) {
+        return Math.floor(x) === x;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <div align="center">
+      <h3>JS calculator</h3>
+      <hr />
+      <form>
+        <input id="display" value="0" size="21" />
+        <input id="op" type="button" value="    &larr;    " onclick="del()" />
+        <br />
+    
+        <input id="num" type="button" value="    7    " onclick="add('7')" />
+        <input id="num" type="button" value="    8    " onclick="add('8')" />
+        <input id="num" type="button" value="    9    " onclick="add('9')" />
+        <input id="op" type="button" value="    /    " onclick="add('/')" />
+        <br />
+        <input id="num" type="button" value="    4    " onclick="add('4')" />
+        <input id="num" type="button" value="    5    " onclick="add('5')" />
+        <input id="num" type="button" value="    6    " onclick="add('6')" />
+        <input id="op" type="button" value="    *    " onclick="add('*')" />
+        <br />
+        <input id="num" type="button" value="    1    " onclick="add('1')" />
+        <input id="num" type="button" value="    2    " onclick="add('2')" />
+        <input id="num" type="button" value="    3    " onclick="add('3')" />
+        <input id="op" type="button" value="    -    " onclick="add('-')" />
+        
+        
+        <br />
+        <input id="num"
+          type="button"
+          value="            0            "
+          onclick="add('0')"
+        />
+        <input id="op" type="button" value="    .    " onclick="add('.')" />
+        <input id="op" type="button" value="    +    " onclick="add('+')" />
+        <br />
+        <input id="clear"
+          type="button"
+          value="       Clear          "
+          onclick="clearDisplay()"
+        />
+        <input id="enter"
+          type="button"
+          value="       Enter          "
+          name="enter"
+          onclick="compute()"
+        />
+      </form>
+      <h4>COMSI, HM14</h4>
+    </div>
+  </body>
+</html>

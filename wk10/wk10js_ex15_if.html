@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript</title>
+    <style></style>
+    <script></script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>if-else를 이용한 학점 매기기</h3>
+    <hr />
+    <script>
+      var grade;
+      var score = prompt("황기태 님 점수를 입력하세요", 100);
+      score = parselnt(score);
+      // 문자열을 숫자로 바꿈
+      if (score >=90)
+        // score가 90 이상
+        grade = "A";
+      else if (score >=80)
+        // 80 이상 90 미만
+        grade = "B";
+      else if (score >=70)
+        // 70 이상 80 미만
+        grade = "C";
+      else if (score >=60)
+        // 60 이상 70 미만
+        grade = "D";
+      // 60 미만
+      else
+       grade = "F";
+      document.write(score + "는 " + grade + "입니다.<br>");
+    </script>
+  </body>
+</html>

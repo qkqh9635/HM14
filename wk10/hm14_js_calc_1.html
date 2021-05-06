@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hmnn : Javascript</title>
+    <style>
+
+    </style>
+    <script>
+      var expression = "";
+
+      function add(character) {
+        expression = expression + character;
+
+        document.getElementById("display").value = expression;
+      }
+      function del(){
+        expression = expression.substring(0,expression.length-1);
+        document.getElementById("display").value = expression;
+      }
+
+      function compute() {
+        document.getElementById("display").value = eval(expression);
+      }
+
+      function clearDisplay() {
+        expression = "";
+        document.getElementById("display").value = "0";
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <div align="center">
+      <h3>JS calculator</h3>
+      <hr />
+      <form>
+        <input id="display" value="0" size="20" />
+        <input type="button" value="    &larr;    " onclick="del()" />
+        <br />
+        <input type="button" value="    7    " onclick="add('7')" />
+        <input type="button" value="    8    " onclick="add('8')" />
+        <input type="button" value="    9    " onclick="add('9')" />
+        <input type="button" value="    /    " onclick="add('/')" />
+        <br />
+        <input type="button" value="    4    " onclick="add('4')" />
+        <input type="button" value="    5    " onclick="add('5')" />
+        <input type="button" value="    6    " onclick="add('6')" />
+        <input type="button" value="    *    " onclick="add('*')" />
+        <br />
+        <input type="button" value="    1    " onclick="add('1')" />
+        <input type="button" value="    2    " onclick="add('2')" />
+        <input type="button" value="    3    " onclick="add('3')" />
+        <input type="button" value="    -    " onclick="add('-')" />
+        <br />
+        <input
+          type="button"
+          value="            0            "
+          onclick="add('0')"
+        />
+        <input type="button" value="    .    " onclick="add('.')" />
+        <input type="button" value="    +    " onclick="add('+')" />
+        <br />
+        <input
+          type="button"
+          value="       Clear          "
+          onclick="clearDisplay()"
+        />
+        <input
+          type="button"
+          value="       Enter          "
+          name="enter"
+          onclick="compute()"
+        />
+      </form>
+      <h4>COMSI, HMxx</h4>
+    </div>
+  </body>
+</html>
