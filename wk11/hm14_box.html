@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>hm14: box</title>
+<script>
+
+function set(title,author,price){
+this.title = title;
+this.author =author;
+this.price =price;
+}
+
+</script>
+</head>
+<body>
+<h2>7장 10번</h2>
+<hr>
+<script>
+
+var i;
+var ex=0;
+var ti=0;
+var bookArray = new Array();
+var newArray = new Array();
+
+for(i=0;i<5;i++){
+bookArray[i] = prompt("'','로 분리하면서 책제목 저자 가격 순으로 입력","");
+
+}
+
+for(i=0;i<5;i++){
+sp =bookArray[i].split(",");
+
+var book = new Object();
+book.title = sp[0];
+book.author = sp[1];
+book.price = sp[2];
+newArray[i] = book;
+}
+
+for(i=0;i<5;i++){
+document.write(newArray[i].title + ", ");
+document.write(newArray[i].author + ", ");
+document.write(newArray[i].price + "<br>");
+}
+
+for(i=0; i<5; i++)
+{
+    if(ex<newArray[i].price){
+        ex=newArray[i].price;
+        if(ex=newArray[i].price){
+            ti=newArray[i].title;
+        }
+    }
+}
+
+document.write("<hr>가장 가격이 비싼 책은 " + ti + "이고, 가격은 " + ex +"원 입니다.");
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript objects</title>
+    <style></style>
+    <script></script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>객체 생성 및 활용</h3>
+    <hr />
+
+    <script>
+      // Date 객체 생성
+      var today = new Date();
+
+      // Date 객체의 toGMTString() 메소드 호출
+      document.write("현재 시간 : " +  "<br>");
+      document.write("현재 시간 : " + today.toGMTString() + "<br>");
+
+      // String 객체 생성
+      var mystr = new String("자바스크립트 공부하기");
+      document.write("mystr의 내용 : " + mystr + "<br>");
+      document.write("mystr의 길이 : " + mystr.length +"<br>");
+      // mystr.length=10; // 이 문장은 오류이다.
+    </script>
+  </body>
+</html>

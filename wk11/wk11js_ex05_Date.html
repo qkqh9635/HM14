@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript object</title>
+    <style></style>
+    <script></script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>Date 객체로 현재 시간 알아내기</h3>
+    <hr />
+    <script>
+      var now = new Date();
+      // 현재 시간 값을 가진 Date 객체 생성
+      document.write("현재 시간(UTC) : " +now.toUTCString()+ "<br><hr>");
+      document.write("현재 시간 : " + now+"<br><hr>");
+      document.write(now.getFullYear()+"년도<br>");
+      document.write(now.getMonth()+1+"월<br>");
+      document.write(now.getDate()+"일<br>");
+      document.write(now.getHours()+"시<br>");
+      document.write(now.getMinutes()+"분<br>");
+      document.write(now.getSeconds()+"초<br>");
+      document.write(now.getMilliseconds()+"밀리초<br><hr>");
+
+      var next = new Date(2017, 7, 15, 12, 12, 12);
+      // 7은 8월
+      document.write("next.toLocaleString() : " +next.toLocaleString()+ "<br>");
+    </script>
+  </body>
+</html>

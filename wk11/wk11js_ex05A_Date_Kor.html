@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript object</title>
+    <style></style>
+    <script>
+      // helper function to get a nicely formatted date string (for IOT date string)
+      function getKorDateString() {
+        var time = new Date().getTime();
+        // 32400000 is (GMT+9 Korea, GimHae)
+        // for your timezone just multiply +/-GMT by 3600000
+        var datestr = new Date(time + 32400000)
+          .toISOString()
+          .replace(/T/, " ")
+          .replace(/Z/, "");
+        return datestr;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>Date 객체로 현재 시간 알아내기</h3>
+    <hr />
+    <script>
+      var now = new Date();
+      var now_Kor = getKorDateString();
+      // 현재 시간 값을 가진 Date 객체 생성
+      document.write("현재 시간 : " + now.toUTCString() + "<br><hr>");
+      document.write("현재 시간 : " + now.toISOString()+"<br><hr>");
+      document.write("현재 시간 : " + now + "<br><hr>");
+      document.write("현재 시간 (KOR, IoT): " + now_Kor + "<br><hr>");
+    </script>
+  </body>
+</html>
