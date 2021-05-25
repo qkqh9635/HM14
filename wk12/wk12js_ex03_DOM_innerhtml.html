@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14: Javascript DOM</title>
+    <style></style>
+    <script>
+      function change() {
+        var p = document.getElementById("firstP");
+        p.innerHTML= "나의 <img src='media/puppy.png'>강아지";
+   
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>innerHTML 활용 : 아래 글자에 클릭하면 예쁜 강아지가 보입니다.</h3>
+    <hr />
+    <p id="firstP" style="color:blue" onclick="change()">
+      여기에 <span style="color:red">클릭하세요</span>
+    </p>
+  </body>
+</html>

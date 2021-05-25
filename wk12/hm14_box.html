@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : box Object</title>
+    <style></style>
+    <script>
+      function fill() {
+        this.amount += 2;
+      }
+      function consume() {
+        this.amount -= 2;
+      }
+      var box = new Object();
+      box.color = "red";
+      box.size = "10";
+      box.amount = 0;
+      box.fill = fill;
+      box.consume = consume;
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>HM01 박스 객체 new object 사용 출력</h3>
+    <hr />
+    <script>
+      document.write(
+        "Box : " + box.color + "," + box.size + "," + box.amount + "<hr>"
+      );
+      document.write("Box-Color : " + box.color + "<br>");
+      document.write("Box-Size : " + box.size + "<br>");
+      document.write("Box-Amount : " + box.amount + "<hr>");
+      box.fill();
+      document.write("fill 함수 적용한 amount 값 : " + box.amount + "<br>");
+      box.consume();
+      document.write("comsume 함수 적용한 amount 값 : " + box.amount + "<hr>");
+      var user = prompt("깜짝퀴즈!! 박스의 초기 amount 값을 예측해 보세요!", 0);
+      if (user == null) {
+        document.write("취소 되었습니다.");
+      } else {
+        var amounts = box.amount;
+        if (user == amounts)
+          document.write("깜짝퀴즈 결과 !! <br>정답! "),
+            (document.body.style.backgroundColor = "lightskyblue");
+        else
+          document.write("깜짝퀴즈 결과 !! <br>아닙니다! "),
+            (document.body.style.backgroundColor = "pink01");
+        document.write("정답은 " + amounts + " 입니다<br>");
+      }
+    </script>
+  </body>
+</html>

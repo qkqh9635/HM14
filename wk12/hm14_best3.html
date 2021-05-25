@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>HM14 favorite 3 movie</title>
+<script>
+function load() {
+var select = document.getElementById("movie");
+window.location=select.options[select.selectedIndex].value;
+}
+
+</script>
+</head>
+<body>
+<h3>HM14 favorite 3 movie</h3>
+<hr>
+영화 선택 :
+<select id="movie">
+<option value="https://movie.naver.com/movie/bi/mi/basic.nhn?code=44529" >해바라기
+<option value="https://movie.naver.com/movie/bi/mi/basic.nhn?code=72363">어벤져스
+<option value="https://movie.naver.com/movie/bi/mi/basic.nhn?code=167638">완벽한 타인
+</select>
+<p>
+<button onclick="load()">영화정보</button>
+</body>
+</html>

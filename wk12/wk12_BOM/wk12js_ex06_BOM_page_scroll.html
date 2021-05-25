@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : 웹 페이지의 자동 스크롤</title>
+    <style></style>
+    <script>
+      function startScroll(interval) {
+        setInterval("autoScroll()", interval);
+      }
+
+      function autoScroll() {
+        window.scrollBy(0,10);// 10픽셀 위로 이동
+      }
+    </script>
+  </head>
+
+  <body onload="startScroll(1000)">
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>자동 스크롤 페이지</h3>
+    <hr />
+    <h3>꿈길(이동순)</h3>
+    꿈길에<br />
+    발자취가 있다면<br />
+    님의 집 창밖<br />
+    그 돌계단 길이 이미 오래 전에<br />
+    모래가 되고 말았을 거예요<br /><br />
+    하지만<br />
+    그 꿈길에서 자취 없다 하니<br />
+    나는 그것이 정말 서러워요<br /><br />
+    이 밤도<br />
+    나는 님의 집 창밖<br />
+    그 돌계단 위에 홀로 서서<br />
+    혹시라도 님의 목소리가 들려올까<br />
+    고개 숙이고 엿들어요<br />
+  </body>
+</html>

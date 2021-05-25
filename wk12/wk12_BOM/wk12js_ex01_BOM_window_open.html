@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript BOM</title>
+    <style></style>
+    <script>
+      function load(URL) {
+        window.open(URL, "myWin", "left=300,top=300,width=400,height=300");
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>window.open()으로 윈도우 열기</h3>
+    <hr />
+    <a href="javascript:load('http://www.graceland.com')"> 엘비스 프레슬리 홈 페이지</a>
+    <br />
+    <a href="javascript:load('http://www.universalorlando.com')">
+      유니버설 올랜드 홈 페이지</a
+    >
+    <br />
+    <a href="javascript:load('http://www.disneyworld.com')">
+      디즈니월드 홈 페이지</a
+    >
+    <br />
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hmnn : 브라우저 정보 출력</title>
+    <style>
+      span {
+        color: red;
+      }
+      div {
+        border-color: yellowgreen;
+        border-style: solid;
+        padding: 5px;
+      }
+    </style>
+
+    <script>
+      function printNavigator() {
+        var text =
+          "<span>appCodeName</span>: " + navigator.appCodeName + "<br>";
+        text += "<span>appName</span>: " + navigator.appName + "<br>";
+        text += "<span>appVersion</span>: " + navigator.appVersion + "<br>";
+        text += "<span>platform</span>: " + navigator.platform + "<br>";
+        text += "<span>product</span>: " + navigator.product + "<br>";
+        text += "<span>userAgent</span>: " + navigator.userAgent + "<br>";
+        text += "<span>vendor</span>: " + navigator.vendor + "<br>";
+        text += "<span>language</span>: " + navigator.language + "<br>";
+        text += "<span>onLine</span>: " + navigator.onLine + "<br>";
+        text +=
+          "<span>cookieEnabled</span>: " + navigator.cookieEnabled + "<br>";
+        text +=
+          "<span>javaEnabled()</span>:" + navigator.javaEnabled() + "<br>";
+        text +=
+          "<span>plugins.length</span>: " + navigator.plugins.length + "<br>";
+        for (j = 0; j < navigator.plugins.length; j++) {
+          text += "plugins" + j + " : <blockquote>";
+          text += navigator.plugins[j].name + "<br>";
+          text += "<i>" + navigator.plugins[j].description + "</i><br>";
+          text += navigator.plugins[j].filename + "</blockquote>";
+        }
+
+        text += "<span>geolocation</span>: " + navigator.geolocation + "<br>";
+
+        // div 태그에 출력
+        var div = document.getElementById("div");
+        div.innerHTML = text;
+      }
+    </script>
+  </head>
+
+  <body onload="printNavigator()">
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>브라우저에 관한 정보 출력</h3>
+    아래에 이 브라우저에 관한 여러 정보를 출력합니다.
+    <hr />
+    <p></p>
+    <div id="div"></div>
+  </body>
+</html>

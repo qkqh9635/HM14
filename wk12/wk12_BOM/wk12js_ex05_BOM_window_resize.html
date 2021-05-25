@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hmnn : Javascript BOM</title>
+    <style></style>
+    <script></script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>윈도우의 위치와 크기 조절</h3>
+    <hr />
+    <button onclick="window.moveBy(-10, 0)">left</button>
+    <button onclick="window.moveBy(10, 0)">right</button>
+    <button onclick="self.moveBy(0, -10)">up</button>
+    <button onclick="moveBy(0, 10)">down</button>
+    <button onclick="resizeBy(10, 10)">+</button>
+    <button onclick="resizeBy(-10, -10)">-</button>
+  </body>
+</html>

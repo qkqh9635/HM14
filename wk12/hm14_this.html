@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript DOM</title>
+    <style></style>
+    <script>
+      function change(obj, size, color) {
+        obj.style.color = color;
+        obj.style.fontSize = size;
+      }
+      function reset(size,color){
+          var resetArray = document.getElementsByClassName("reset1")
+          for (var i = 0; i < resetArray.length; i++) {
+          var reset = resetArray[i];
+          reset.style.color = "black";
+          reset.style.fontSize = "15px";
+        }
+
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>this 활용</h3>
+    <hr />
+    <button class="reset1" onclick="change(this, '30px', 'red')">
+      버튼
+    </button>
+    <button class="reset1" onclick="change(this, '30px', 'blue')">
+      버튼
+    </button>
+    <div class="reset1" onclick="change(this, '25px', 'orange')">
+      여기 클릭하면 크기와 색 변경
+    </div>
+
+    <button class="reset1" onclick="reset()">
+      Go back!
+    </button>
+  </body>
+</html>
