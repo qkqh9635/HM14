@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript Event</title>
+    <style></style>
+    <script>
+      var width = 1;
+      // 테두리 두깨
+      function down(obj) {
+        obj.style.fontStyle = "italic";
+      }
+
+      function up(obj) {
+        obj.style.fontStyle = "normal";
+      }
+
+      function over(obj) {
+        obj.style.borderColor = "violet";
+        // 테두리 폭이 0일 때 색은 보이지 않는다.
+      }
+
+      function out(obj) {
+        obj.style.borderColor = "lightgray";
+      }
+
+      function wheel(e,obj) {
+        // e는 이벤트 객체
+        if (e.wheelDelta < 0) {
+          // 휠을 아래로 굴릴 때
+          width--;
+          // 폭 1 감소
+          if (width < 0) width = 0;
+          // 폭이 0보다 작아지지 않게
+        } // 휠을 위로 굴릴 때
+        else width++;
+        // 폭 1 증가
+        obj.style.borderStyle = "ridge";
+        obj.style.borderWidth = width + "px";
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>마우스 관련 이벤트 리스너</h3>
+    <hr />
+    <div>
+      마우스 관련
+      <span 
+        onmousedown="down(this)" 
+        onmouseup="up(this)" 
+        onmouseover="over(this)" 
+        onmouseout="out(this)" 
+        onwheel="wheel(event,this)"
+        style="display:inline-block">이벤트 
+      </span>가 발생합니다.
+    </div>
+  </body>
+</html>

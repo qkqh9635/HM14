@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript Event</title>
+    <style></style>
+    <script>
+      var p;
+      function init() {
+        // 문서가 완전히 로드되었을 때 호출
+        p = document.getElementById("p");
+        p.onmouseover = over;
+        // over()를 onmouseover 리스너로 등록
+        p.onmouseout = out;
+        // out()를 onmouseout 리스너로 등록
+      }
+
+      function over() {
+        p.style.backgroundColor = "orchid";
+      }
+
+      function out() {
+        p.style.backgroundColor="white";
+      }
+    </script>
+  </head>
+
+  <body onload="init()">
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록</h3>
+    <hr />
+    <p id ="p">마우스 올리면 orchid 색으로 변경</p>
+  </body>
+</html>

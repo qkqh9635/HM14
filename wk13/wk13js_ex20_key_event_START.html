@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hmnn : Javascript Event</title>
+    <style></style>
+    <script>
+      // var str = "";
+
+      function whatKeyDown(e) {
+        var str = "";
+
+        var div = document.getElementById("div");
+        div.innerHTML = "";
+        // div 객체 내용을 지운다.
+        if (e.altKey) {
+          if (e.altLeft) str += "왼쪽 Alt 키가 눌러졌습니다";
+          else str += "오른쪽 Alt 키가 눌러졌습니다.";
+          str += "<br>";
+        }
+
+        if (e.shiftKey) {
+          if (e.shiftLeft) str += "왼쪽 Shift 키가 눌러졌습니다.";
+          else str += "오른쪽 Shift 키가 눌러졌습니다.";
+          str += "<br>";
+        }
+
+        if (e.ctrlKey) {
+          if (e.ctrlLeft) str += "왼쪽 Ctrl 키가 눌러졌습니다.";
+          else str += "오른쪽 Ctrl 키가 눌러졌습니다";
+          str += "<br>";
+        }
+
+        str += String.fromCharCode(e.keyCode) + "키가 눌려졌습니다." + "<br>";
+        div.innerHTML = str;
+        // div 객체에 문자열을 출력한다.
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>키 리스너와 키 이벤트 객체의 프로퍼티</h3>
+    <hr />
+    텍스트 창에 키를 눌러 보세요. Alt, Shift, Ctrl 키도 가능합니다.
+    <br />
+    <input type="text" id="text" onkeydown="whatKeyDown(event)" />
+    <div
+      id="div"
+      style="background-color: skyblue; width: 250px; height: 500px;"
+    ></div>
+  </body>
+</html>

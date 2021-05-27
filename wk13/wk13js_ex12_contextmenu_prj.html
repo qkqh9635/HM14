@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript Event</title>
+    <style></style>
+    <script></script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <script>
+      function hideMenu() {
+        alert("오른쪽 클릭<컨텍스트 메뉴>금지");
+        return false;
+      }
+      // document.oncontextmenu = hideMenu;
+    </script>
+
+    <h3>oncontextmenu에서 컨텍스트 메뉴 금지</h3>
+    <hr />
+    그림에 대한 마우스 오른쪽 클릭은 금지됩니다.
+    <br />
+    그림 다운로드를 금지합니다.
+    <hr />
+    <p></p>
+    <img
+      src="media/Desert.png"
+      oncontextmenu='alert("그림 다운로드를 금지합니다");return false;'
+    />
+    <p></p>
+  </body>
+</html>
