@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm14 : Javascript Event</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <style>
+      			span:hover{
+    font-size: 17pt;
+    color:rgb(252, 121, 202);
+}  
+	
+        
+    </style>
+    <script src="pic.js">
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <a class="font3"><h1>BRAVE GIRLS</h1></a>
+             <a class="font1"><h2><span>#사진 클릭시 멤버가 변합니다!</span></h2></a>
+    <p>
+        <img
+          style="border:20px ridge rgb(179, 221, 245)"
+          src="media2/BraveGirls.png"
+          alt="."
+          width="400"
+          height="400"
+          onclick="change(this)"
+          onload="init(this)"
+        />
+      <p id="info"></p>
+      <h2><a class="font3"> <p id="name"></p></a></h2>    
+      </p>
+      <a class="font4" href="hm14_music.html"><h3>이전으로</h3></a>
+  </body>
+</html>

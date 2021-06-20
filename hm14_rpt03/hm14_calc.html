@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>hm14 : 계산기</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <style>
+      div.box {
+        background-color:rgb(116, 189, 192);
+        height:400px;
+        width:250px;
+        border-radius:10px;
+        border-bottom:black 5px solid;
+        border-right: black 5px solid;
+        position: absolute;
+        top:230px;
+        left:42%;
+      }
+      input {
+        border:none;
+        border-radius:8px;
+        padding: 8px;
+        display: inline;
+        margin-top: 4px;
+        font-size: 14px;
+        background-color: rgb(33, 52, 53);
+      }
+      input#display {
+        color:black;
+        background-color: rgb(168, 233, 208);
+        border-bottom:black 2px solid;
+        font-size: 14px;
+        text-align: right;
+      }
+      input.num {
+        color:white;
+        background-color:#dbce15;
+        border-bottom:black 2px solid;
+        border-top:2px #dbce15 solid;
+        font-weight: bold;
+      }
+      input.op {
+        color:white;
+        background-color:#1e9ae2;
+        border-bottom:black 2px solid;
+        border-top:2px #1e9ae2 solid;
+        font-weight: bold;
+      }
+      input.op1 {
+        color:white;
+        background-color:#a53636;
+        border-bottom:black 2px solid;
+        border-top:2px #a53636 solid;
+        font-weight: bold;
+      }
+      input.op2 {
+        color:white;
+        background-color:#41c035;
+        border-bottom:black 2px solid;
+        border-top:2px #41c035 solid;
+        font-weight: bold;
+      }
+      input#clear {
+        color:white;
+        background-color:#3b3b3b;
+        border-bottom:black 2px solid;
+        border-top:2px #3b3b3b solid;
+      }
+      input#enter {
+        color:white;
+        background-color: #3b3b3b;
+        border-bottom:black 2px solid;
+        border-top:2px #3b3b3b solid;
+      }
+    </style>
+    <script src="calc.js"> //js 파일 불러오기
+    </script>
+    </head>
+     <body>
+       <header><a class="font1"><h2>calculator</h2></a></header>
+        <div class="box">
+            
+              <h3>HM14 calculator</h3>
+              <hr />
+              <form>
+                <input id="display" value="0" size="21" />
+                <input id="clear" type="button" value="          AC          "onclick="clearDisplay()"/>
+                <input class="op" type="button" value="  hex  " onclick="hexColour()" />
+                <input class="op" type="button" value="   %   " onclick="add('%')" />
+                <br />
+                <input class="num" type="button" value="    7    " onclick="add('7')" />
+                <input class="num" type="button" value="    8    " onclick="add('8')" />
+                <input class="num" type="button" value="    9    " onclick="add('9')" />
+                <input class="op2" type="button" value="    /    " onclick="add('/')" />
+                <br />
+                <input class="num" type="button" value="    4    " onclick="add('4')" />
+                <input class="num" type="button" value="    5    " onclick="add('5')" />
+                <input class="num" type="button" value="    6    " onclick="add('6')" />
+                <input class="op2" type="button" value="    *    " onclick="add('*')" />
+                <br />
+                <input class="num" type="button" value="    1    " onclick="add('1')" />
+                <input class="num" type="button" value="    2    " onclick="add('2')" />
+                <input class="num" type="button" value="    3    " onclick="add('3')" />
+                <input class="op1" type="button" value="    -    " onclick="add('-')" />
+                <br />
+                <input
+                  class="num" 
+                  type="button"
+                  value="            0            "
+                  onclick="add('0')"
+                />
+                <input class="num" type="button" value="    .    " onclick="add('.')" />
+                <input class="op1" type="button" value="    +   " onclick="add('+')" />
+                <br>
+                <input id="clear" type="button" value="           C            " onclick="del()" />
+                <input id="enter" type="button" value="           =            " name="enter" onclick="compute()"/>
+              </form>
+            </div>
+
+
+
+
+
+
+    </body>
+</html>
